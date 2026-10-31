@@ -1,0 +1,124 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PERSONAL GYM VISTARISE</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c0d0f;--g:#ff7a1a;--mute:#8a9099}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;color:#fff;background:var(--ink);line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+.nw{white-space:nowrap}
+.en{font-family:Oswald;letter-spacing:.16em;font-size:13px;color:var(--g)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 40px}
+section{padding:100px 0}.lt{background:#f3f2ef;color:var(--ink)}
+h2{font-size:40px;line-height:1.35;font-weight:900;margin:8px 0 40px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:900;padding:18px 32px;text-decoration:none;font-size:15px;color:#fff}
+.b-line{background:#06c755}.b-cal{background:var(--g);color:#111!important}.lt .en,.lt .kg em,.lt .faq h4::before,.lt .nh a{color:#b84f00}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.note{position:fixed;top:12px;right:12px;z-index:99;background:#e23b3b;color:#fff;font-size:11px;padding:4px 10px;font-weight:700}
+header{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:24px 40px}
+header img{height:52px;width:auto}header nav{display:flex;gap:28px;font-size:13px;opacity:.85;margin-right:110px}
+.hero{position:relative;min-height:820px;display:flex;align-items:flex-end;padding:0 0 100px;overflow:hidden}
+.hero .bg{position:absolute;right:0;top:0;width:52%;height:100%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0,transparent 45%),linear-gradient(0deg,var(--ink) 0,transparent 30%)}
+.hero .in{position:relative}
+.hero h1{font-size:84px;line-height:1.15;font-weight:900;margin:16px 0 22px}.hero h1 b{color:var(--g)}
+.hero p{font-size:16px;opacity:.85;margin-bottom:12px}
+.bio{font-size:14px!important;opacity:.6!important;margin-bottom:36px!important;max-width:30em}
+.res{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.res a{color:#fff;text-decoration:none;display:block}.res img{aspect-ratio:4/5;height:auto}
+.res a div{padding:12px 2px 0}
+.res b{font-family:Oswald;font-size:22px;color:var(--g);display:block;line-height:1.2}.res span{font-size:12px;display:block;opacity:.85}
+.cap{font-size:12px;color:var(--mute);margin-top:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:8px}
+.feat .n{font-family:Oswald;font-size:48px;color:var(--g);line-height:1}.feat h3{font-size:21px;margin:10px 0 8px;line-height:1.5}.feat p{color:#555;font-size:14px}
+.worry{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:56px}.worry span{background:#fff;padding:10px 20px;font-weight:700;font-size:15px}
+.tr{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center}
+.tr .ph{display:grid;grid-template-columns:3fr 2fr;gap:4px;height:520px}
+.tr ul{list-style:none;margin:24px 0}.tr li{border-left:3px solid var(--g);padding-left:14px;margin-bottom:10px;font-weight:700}
+.tr p{color:#b6bcc4}
+.ba{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ba .im{aspect-ratio:4/5}.ba .kg{font-family:Oswald,sans-serif;font-size:26px;margin-top:14px;font-weight:700}.ba .kg em{color:var(--g);font-style:normal}.ba small{color:#777;font-size:13px}
+.star{display:flex;align-items:center;gap:18px;margin:56px 0 24px}.star b{white-space:nowrap;font-family:Oswald;font-size:56px;line-height:1}.star em{white-space:nowrap;color:#f5b400;font-style:normal;font-size:24px}.star small{color:#777}
+.rv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.rv div{background:#fff;padding:24px;font-weight:900;font-size:17px;line-height:1.5}.rv small{display:block;font-weight:500;font-size:12px;color:#888;margin-top:10px}
+.story{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.story a{color:#fff;text-decoration:none}.story .im{aspect-ratio:4/5}.story b{font-family:Oswald;color:var(--g);display:block;margin-top:14px}.story span{font-size:14px;color:#b6bcc4}
+.course{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#222}.course div{background:#14161a;padding:36px 30px}.course h3{font-size:20px}.course p{color:#9aa1aa;font-size:14px;margin:8px 0 18px}.price{font-family:Oswald;font-size:24px;color:var(--g)}
+.pil{display:grid;grid-template-columns:160px 1fr auto;gap:28px;align-items:center;background:#1a1c20;margin-top:24px;padding:20px}.pil .im{height:160px}.pil h3{font-size:20px}.pil p{color:#b6bcc4;font-size:14px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr)}.flow div{border-top:2px solid var(--ink);padding:20px 20px 0 0}.flow b{font-family:Oswald;font-size:13px;color:var(--mute)}.flow h3{font-size:18px;margin:4px 0}.flow p{font-size:13px;color:#555}
+.faq{margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}.faq div{border-bottom:1px solid #ddd;padding:20px 0}.faq h4{font-size:16px}.faq h4::before{content:"Q. ";font-family:Oswald;color:var(--g)}.faq p{color:#666;font-size:14px;margin-top:6px}
+.acc dl{display:grid;grid-template-columns:100px 1fr;gap:14px 0;font-size:15px}.acc dt{color:var(--mute)}
+.map{height:220px;margin-top:28px;background:linear-gradient(135deg,#1d2025,#2a2e34);display:flex;align-items:center;justify-content:center;color:#fff6;font-size:13px}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.ig div{aspect-ratio:1}.igh{display:flex;justify-content:space-between;margin-bottom:14px;font-weight:700}.igh span{color:var(--mute);font-weight:400;font-size:13px}
+.cta{text-align:center;background:radial-gradient(ellipse at 50% 0,#4a2a12,var(--ink) 70%)}.cta h2{font-size:46px}.cta .btns{justify-content:center}
+footer{background:#000;color:#666;font-size:12px;text-align:center;padding:28px}
+.spbar{display:none}
+.note-s{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.note-s a{color:var(--ink);text-decoration:none;background:#fff}.note-s img{aspect-ratio:1.91/1;height:auto}.note-s div{padding:14px 16px}.note-s time{font-family:Oswald;font-size:12px;color:var(--mute)}.note-s h3{font-size:15px;line-height:1.55;margin-top:4px}
+.nh{display:flex;justify-content:space-between;align-items:flex-end}.nh a{color:var(--g);font-size:13px;font-weight:700;text-decoration:none;margin-bottom:40px}
+.faq details summary{list-style:none;cursor:pointer}.faq details summary::-webkit-details-marker{display:none}
+.ath{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:start}.aph{display:grid;grid-template-columns:1fr 1fr;gap:4px}.aph img{aspect-ratio:4/5;height:auto}
+.al{list-style:none}.al li{border-bottom:1px solid #2a2d33;padding:14px 0;display:grid;gap:2px}.al .r{font-weight:900;font-size:16px;line-height:1.5}.al .w{font-size:13px;color:#9aa1aa}.al a{color:var(--g);text-decoration:none;margin-left:6px}
+.rv{grid-template-columns:repeat(3,1fr)!important}.rv div{font-size:15px!important;font-weight:700!important;line-height:1.7!important}.ba small{display:block;margin-top:12px;font-weight:700;color:#555}.ba .kg{font-size:22px;margin-top:2px}
+@media(max-width:600px){.ath{grid-template-columns:1fr;gap:20px}.aph{display:flex;overflow-x:auto;margin-right:-20px}.aph img{flex:0 0 38%;width:38%}.al li{padding:10px 0}.al .r{font-size:14px}.rv{grid-template-columns:1fr!important;gap:8px!important}.ba .kg{font-size:17px}}
+@media(max-width:600px){.ba,.story{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;gap:12px}.ba>div,.story>a{flex:0 0 70%;scroll-snap-align:start}
+.faq details summary h4{display:flex;gap:6px}.faq details summary h4::after{margin-left:auto;content:"+";color:var(--g)}.faq details[open] summary h4::after{content:"−"}}
+@media(min-width:601px){.faq details summary{pointer-events:none}}
+@media(max-width:600px){.note-s{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px}.note-s a{flex:0 0 78%;scroll-snap-align:start}.nh a{margin-bottom:28px}}
+@media(max-width:600px){
+.wrap{padding:0 20px}section{padding:56px 0}h2{font-size:28px;margin-bottom:28px}
+header{padding:16px 20px}header img{height:40px}header nav{display:none}
+.hero{min-height:760px;padding-bottom:64px}.hero .bg{width:100%;height:470px}
+.hero .bg::after{background:linear-gradient(0deg,var(--ink) 0,transparent 60%)}
+.hero h1{font-size:38px}.hero p{font-size:14px}
+.res{grid-template-columns:1fr 1fr}.res b{font-size:17px}
+.two,.tr,.feat,.ba,.story,.course,.faq{grid-template-columns:1fr;gap:24px}
+.tr .ph{height:380px}.ba,.story{grid-template-columns:1fr 1fr;gap:12px}.ba .kg{font-size:17px}.story span{font-size:12px}
+.rv{grid-template-columns:1fr 1fr}.rv div{font-size:15px;padding:18px}
+.pil{grid-template-columns:96px 1fr}.pil .im{height:96px}.pil .btn{grid-column:1/-1}
+.flow{grid-template-columns:1fr 1fr;gap:24px 0}.cta h2{font-size:27px}
+.btn{padding:16px 22px;font-size:14px;flex:1}
+.pc{display:none}.star{flex-wrap:wrap;gap:8px 14px}.star b{font-size:44px}.res b{font-size:15px}.spbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50}
+.spbar a{text-align:center;padding:15px 0;font-weight:900;font-size:14px;text-decoration:none;color:#fff}
+footer{padding-bottom:84px}}
+</style></head><body>
+<div class="note">提案用たたき</div>
+<header><img src="img/logo.png" alt="VISTARISE"><nav><span>実績</span><span>トレーナー</span><span>お客様の声</span><span>コース</span><span>アクセス</span></nav></header>
+<section class="hero"><div class="bg"><img src="img/hero.jpg" style="object-position:50% 20%"></div><div class="wrap in"><div class="en">PERSONAL GYM VISTARISE / NIIGATA</div>
+<h1>整えて、変わる。<br><span class="nw"><b>機能美</b>ボディメイク</span></h1>
+<p><span class="nw">新潟・上近江｜</span><wbr><span class="nw">姿勢・動作改善から始める</span><wbr><span class="nw">パーソナルジム</span></p>
+<p class="bio">体の「動かし方」から改善するパーソナル指導。<wbr>機能性と美しさを両立し、<wbr>あなたの理想を最短でデザイン。</p>
+<div class="btns"><a class="btn b-line" href="#">LINEで予約・相談</a><a class="btn b-cal" href="#">Webで予約<span class="pc">（Googleカレンダー）</span></a></div></div></section>
+<section style="padding-top:40px"><div class="wrap"><div class="en">ACHIEVEMENTS OF SUPPORTED ATHLETES</div><h2>サポート選手の大会実績</h2><div class="ath"><div class="aph"><img src="img/a1.jpg"><img src="img/a2.jpg"><img src="img/a3.jpg"><img src="img/a4.jpg"></div><ul class="al"><li><span class="r">2026 BBJ関東大会 モデルジャパン部門グランプリ</span><span class="w">吉田選手 <a href="https://www.instagram.com/taichi_fit213/" target="_blank">@taichi_fit213 ↗</a></span></li><li><span class="r">2026 JBBF北陸甲信越 -172cm級 準優勝</span><span class="w">神田選手 <a href="https://www.instagram.com/u_no_workoutlife/" target="_blank">@u_no_workoutlife ↗</a></span></li><li><span class="r">2026 JBBF新潟・北陸甲信越 メンズフィジーク180cm超級 2日連続3位</span><span class="w">中島選手 <a href="https://www.instagram.com/nakaji_s2k/" target="_blank">@nakaji_s2k ↗</a></span></li><li><span class="r">2026 JBBF新潟 メンズフィジーク-180cm級 3位</span><span class="w">高橋選手 <a href="https://www.instagram.com/yuuki0624fitness/" target="_blank">@yuuki0624fitness ↗</a></span></li><li><span class="r">2026 BBJ東北大会 モデルジャパン 3位</span><span class="w">稲田選手 <a href="https://www.instagram.com/inakkoo/" target="_blank">@inakkoo ↗</a></span></li><li><span class="r">2025 JBBF新潟選手権 初出場でクラス別優勝・オーバーオール優勝</span><span class="w">Y.K様</span></li></ul></div></div></section>
+
+
+
+
+
+<section class="lt"><div class="wrap"><div class="en">WHY VISTARISE</div><h2>こんなお悩みに、<wbr>3つのアプローチ。</h2>
+<div class="worry"><span>自己流ダイエットに限界</span><span>猫背・巻き肩</span><span>鍛えても効かない</span></div>
+<div class="feat"><div><div class="n">01</div><h3>まず、身体を整える。</h3><p>姿勢と動作を整えるところから始めます。</p></div><div><div class="n">02</div><h3>狙った場所に効く、<wbr>言葉にする指導。</h3><p>解剖学にもとづき、分かりやすく伝えます。</p></div><div><div class="n">03</div><h3>無理な制限なしの<wbr>食事サポート。</h3><p>リバウンドを防ぐ食事サポート。</p></div></div></div></section>
+<section><div class="wrap tr"><div class="ph"><img src="img/face.jpg" style="object-position:50% 25%"><img src="img/tr2.jpg"></div><div><div class="en">TRAINER</div><h2>明るく、寄り添い、<br>結果に本気。</h2>
+<p>代表トレーナー くにちゃん（@kuni_chan.fit）。<wbr>自身も競技に挑みながら、<wbr>マンツーマンで<wbr><span class="nw">一人ひとりの身体に向き合います。</span></p>
+<ul><li>2023 BBJ新潟1st／浜松3rd／日本大会出場</li><li>2024 JBBF新潟3rd</li><li>日本スポーツ協会アスレティックトレーナー</li><li>コンテスト選手向けパーソナル＆コーチング</li></ul></div></div></section>
+<section class="lt"><div class="wrap"><div class="en">BEFORE / AFTER</div><h2>お客様の変化</h2><div class="ba"><div><div class="im"><img src="img/ba3.jpg"></div><small>2026年2月入会・5ヶ月</small><div class="kg">体重 80.9→<em>69.3kg</em></div><div class="kg">体脂肪率 26.0→<em>9.0%</em></div></div><div><div class="im"><img src="img/ba2.jpg"></div><small>フィジーク初挑戦</small><div class="kg">体重 84.8→<em>75.0kg</em></div><div class="kg">体脂肪率 12.8→<em>6.3%</em></div></div><div><div class="im"><img src="img/ba1.jpg"></div><small>リコンプ</small><div class="kg">骨格筋量 27.6→<em>31.5kg</em></div><div class="kg">体脂肪率 13.6→<em>10.3%</em></div></div></div>
+
+
+
+<div class="star"><b>5.0</b><em>★★★★★</em><small>Googleクチコミ</small></div>
+<div class="rv"><div>「2ヶ月間、週1回のパーソナルで5.6kgの減量と4.3%の体脂肪率ダウンを達成できました！」<small>T.K様</small></div><div>「猫背や巻き肩などの姿勢改善に驚くほど詳しくアプローチしてくれます！」<small>K.C様</small></div><div>「解剖、運動学に基づいてすごく理論的なトレーニング…初心者でも安心です！」<small>U.T様</small></div></div></div></section>
+<section style="padding-top:0" class="lt"><div class="wrap"><div class="nh"><div><div class="en">COLUMN</div><h2>コラム（note）</h2></div><a href="https://note.com/kuni_chanfit1125" target="_blank">すべて見る →</a></div><div class="note-s"><a href="https://note.com/kuni_chanfit1125/n/ne103672a612d" target="_blank"><img src="img/note1.png"><div><time>2026.10.30</time><h3>膝・腰・肩の不調があっても、運動はもっと楽しめる✨✨</h3></div></a><a href="https://note.com/kuni_chanfit1125/n/nbc5e97015b2b" target="_blank"><img src="img/note2.png"><div><time>2026.10.26</time><h3>「食べる」を味方につける⁈新潟でダイエットを成功させるための3つのポイント🌾✨</h3></div></a><a href="https://note.com/kuni_chanfit1125/n/n28cbedc9c264" target="_blank"><img src="img/note3.png"><div><time>2026.10.24</time><h3>ダイエット中でも膝・腰を気にせず動ける身体へ ー VISTARISEがすすめる運動前にチェックしたい身体機能🤓✨</h3></div></a></div></div></section><section><div class="wrap"><div class="en">CLIENT STORY</div><h2>お客様インタビュー</h2><div class="story">
+<a href="#"><div class="im"><img src="img/s1.jpg"></div><b>STORY NO.1</b><span>「人生で初めてボディメイク成功」K.T様</span></a>
+<a href="#"><div class="im"><img src="img/s2.jpg"></div><b>STORY NO.2</b><span>「8年目の挑戦、最高の景色」Y.K様</span></a>
+<a href="#"><div class="im"><img src="img/s3.jpg"></div><b>STORY NO.3</b><span>「15年悩まされた腰痛から解放」S.W様</span></a></div></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="en">COURSE</div><h2>コース・料金</h2><div class="course">
+<div><h3>ボディメイク・<wbr>姿勢改善</h3><p>動作改善から理想の身体へ。</p><div class="price">¥○○,○○○（仮）</div></div>
+<div><h3>大会対策</h3><p>コンテスト選手向けコーチング。</p><div class="price">¥○○,○○○（仮）</div></div>
+<div><h3>セミナー</h3><p>内容・形式は確認中（仮）。</p><div class="price">¥○○,○○○（仮）</div></div></div>
+<div class="pil"><div class="im"><img src="img/pil.jpg"></div><div><div class="en">NEW PROGRAM</div><h3>ピラティス、始動。<wbr>先行体験受付中</h3><p>ピラティススタートアップ限定価格　1回5,000円〜</p></div><a class="btn b-cal" href="#">体験を予約</a></div></div></section>
+<section class="lt"><div class="wrap"><div class="en">FLOW</div><h2>無料体験の流れ</h2><div class="flow">
+<div><b>STEP 01</b><h3>予約</h3><p>LINEまたはWebから。</p></div><div><b>STEP 02</b><h3>カウンセリング</h3><p>お悩み・目標を伺います</p></div><div><b>STEP 03</b><h3>姿勢・動作チェック</h3><p>身体の状態を確認。</p></div><div><b>STEP 04</b><h3>体験トレーニング</h3><p>実際に動いて体感。</p></div></div>
+<div class="faq"><div><details class="q"><summary><h4>運動経験がなくても大丈夫？</h4></summary><p>回答が入ります（仮）</p></details></div><div><details class="q"><summary><h4>女性でも通えますか？</h4></summary><p>回答が入ります（仮）</p></details></div><div><details class="q"><summary><h4>持ち物は？</h4></summary><p>回答が入ります（仮）</p></details></div><div><details class="q"><summary><h4>無理な勧誘はありますか？</h4></summary><p>回答が入ります（仮）</p></details></div></div></div></section>
+<section><div class="wrap two acc"><div><div class="en">ACCESS</div><h2>アクセス・営業時間</h2><dl><dt>住所</dt><dd>新潟市中央区上近江2-10-3 2F</dd><dt>営業時間</dt><dd>9:00–21:00</dd><dt>定休日</dt><dd>水曜日</dd><dt>予約</dt><dd>LINE／Web予約</dd></dl><div class="map">Googleマップ埋め込み</div></div>
+<div><div class="igh">Instagram<span>@vistarisegym_niigata</span></div><div class="ig"><div><img src="img/face.jpg"></div><div><img src="img/rv1.jpg"></div><div><img src="img/rv2.jpg"></div><div><img src="img/ba1.jpg"></div><div><img src="img/s2.jpg"></div><div><img src="img/a1.jpg"></div></div><p class="cap">最新投稿を自動表示（埋め込みエリア）</p></div></div></section>
+<section class="cta"><div class="wrap"><div class="en">CONTACT</div><h2>まずは、あなたの身体を<wbr>知るところから。</h2><div class="btns"><a class="btn b-line" href="#">LINEで予約・相談</a><a class="btn b-cal" href="#">Webで予約<span class="pc">（Googleカレンダー）</span></a></div></div></section>
+<footer>© PERSONAL GYM VISTARISE</footer>
+<div class="spbar"><a class="b-line" href="#">LINEで予約</a><a class="b-cal" href="#">Webで予約</a></div>
+<script>if(innerWidth>600)document.querySelectorAll("details.q").forEach(d=>d.open=true)</script></body></html>
