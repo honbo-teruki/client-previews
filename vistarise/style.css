@@ -26,7 +26,7 @@ header img{height:44px;width:auto}header nav{display:flex;gap:22px;font-size:13p
 .meta{font-size:12px;font-weight:700;margin-top:10px;color:#5c574f}.note{font-size:11px;color:#7a746b}
 .star{display:flex;align-items:center;gap:16px;margin:48px 0 20px;flex-wrap:wrap}.star b{font-family:Oswald;font-size:52px;line-height:1}.star em{color:#e0a100;font-style:normal;font-size:22px}.star a{color:var(--gd);font-weight:700;font-size:14px}
 .tr{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}.tr .ph{height:480px}
-.bdg{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.bdg span{display:flex;align-items:center;gap:10px;background:var(--cr);color:var(--ink);border-left:4px solid var(--g);font-weight:900;font-size:15px;padding:12px 18px}.bdg i{font-style:normal;color:var(--gd);font-size:20px}
+.bdg{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.bdg span{display:flex;align-items:center;gap:10px;background:var(--cr);color:var(--ink);border-left:4px solid var(--g);font-weight:900;font-size:15px;padding:12px 18px}.bdg .big{font-size:18px;padding:16px 22px;border:2px solid var(--ink);border-left:6px solid var(--g)}.bdg i{font-style:normal;color:var(--gd);font-size:20px}
 .course a{text-decoration:none;color:inherit;display:block}.course .im{height:200px;margin:-26px -26px 18px}.course .go{color:var(--gd);font-weight:900;margin-top:10px;display:block}
 .price{font-family:Oswald;font-size:30px;font-weight:700;margin:6px 0}.price small{font-size:14px;font-family:"Zen Kaku Gothic New"}
 .hot{background:var(--cr)!important;border:2px solid var(--ink)}.hot .price{color:var(--gd)}
