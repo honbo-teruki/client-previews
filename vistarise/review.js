@@ -52,6 +52,7 @@
     html += "</ol><p>テスト用の表示です。本番では消します。</p></div>";
     p.innerHTML = html;
     document.body.appendChild(p);
+    if (q.get("panel") === "1") p.classList.add("open");
     p.querySelector(".rp-btn").onclick = function () { p.classList.toggle("open"); };
     p.querySelector(".rp-hide").onclick = function () {
       var off = document.documentElement.classList.toggle("marks-hidden");
