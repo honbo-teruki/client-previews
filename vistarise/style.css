@@ -161,3 +161,9 @@ html.lb-lock{overflow:hidden}
 #ach-ph>div{height:auto!important;aspect-ratio:1200/1697;background:#111}#ach-ph img{object-fit:contain}
 #ach-ph+.confirm-note{margin-bottom:24px}
 @media(max-width:600px){#ach-ph>*{flex:0 0 62%!important}}
+/* 11/15 14:33 追加指示 */
+.story .im.ig{aspect-ratio:auto!important;background:none;display:block}.story .im.ig blockquote{min-width:0!important;width:100%!important;max-width:none!important;margin:0!important}.story .im.ig img{width:100%;height:auto;display:block}
+.story .go{display:inline-block;margin-top:8px;color:var(--gd);font-weight:700;font-size:13px}
+.case .src{font-size:10px;color:#8a847a;text-align:right;margin:-14px 0 10px;line-height:1.4}
+.ath-mv{margin:26px 0 30px}.ath-mv details{background:#fff}
+.hid summary{list-style:none}.hid summary::-webkit-details-marker{display:none}
