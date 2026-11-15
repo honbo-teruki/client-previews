@@ -100,7 +100,7 @@ section{padding:44px 0}h2{margin-bottom:18px}
 h2[style*="margin-top:72px"]{margin-top:44px!important}h2[style*="margin-top:56px"]{margin-top:36px!important}
 .worry{margin-bottom:18px}.worry span{font-size:13px;padding:6px 12px}
 .worry+.g3 .card{padding:18px 20px}.worry+.g3 .n{font-size:34px}
-.g3.vvm,.g3.course,.igs,#ach-ph+.al,#ach-ph{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;gap:14px;padding-bottom:6px}
+.g3.vvm,.g3.course,.igs,#ach-ph~.al,#ach-ph{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;gap:14px;padding-bottom:6px}
 .g3.vvm>*,.g3.course>*,#ach-ph>*{flex:0 0 80%;scroll-snap-align:start}
 .course .im{height:170px}
 .g4.flow{grid-template-columns:1fr 1fr!important;gap:10px}.flow .card{padding:16px 14px}.flow h3{font-size:15px}.flow p{font-size:13px}
@@ -110,8 +110,54 @@ h2[style*="margin-top:72px"]{margin-top:44px!important}h2[style*="margin-top:56p
 .faq details{padding:14px 16px;margin-bottom:8px}.faq summary{font-size:14.5px}
 iframe{height:240px}
 .igs>div{flex:0 0 326px;scroll-snap-align:start}
-#ach-ph+.al{list-style:none;align-items:stretch}#ach-ph+.al li{flex:0 0 80%;scroll-snap-align:start;background:#fff;border:1px solid var(--st);border-bottom:1px solid var(--st);padding:12px 14px;font-size:13px}
+#ach-ph~.al{list-style:none;align-items:stretch}#ach-ph~.al li{flex:0 0 80%;scroll-snap-align:start;background:#fff;border:1px solid var(--st);border-bottom:1px solid var(--st);padding:12px 14px;font-size:13px}
 .kc .g2{grid-template-columns:1fr 1fr!important}.kc .g2 .card{padding:18px 16px}.kc .g2 .price{font-size:24px}
 .vvm .card h3{font-size:16px;word-break:normal;line-break:strict}
 #reviews{align-items:flex-start}#reviews .rv>b{margin-top:6px}
 }
+/* ===== 11/15 Meetフィードバック反映 ===== */
+/* 1 ヒーロー：人物が右向きなので、PCは写真を左・コピーを右に */
+@media(min-width:601px){.hero{grid-template-columns:.9fr 1.1fr}.hero>.ph{order:-1}}
+/* 2 理念の案 */
+.vvm-an{margin-top:28px}.vvm-alt .card{outline:2px dashed var(--g);outline-offset:-2px;background:#fff}.vvm-alt .tag{margin-bottom:4px}
+/* 3 写真枠を3:2に統一（お客様の変化・コース・キッズの事例） */
+.course .im,.case:not(.ba) .im{height:auto!important;aspect-ratio:3/2}
+@media(min-width:601px){#change .g4.case{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* 4・13 拡大表示 */
+img.zoomable{cursor:zoom-in}.bam .card.zoom{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:200;background:rgba(20,19,17,.92);display:none;align-items:center;justify-content:center;padding:48px 56px}
+#lb.on{display:flex}#lb figure{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:10px;cursor:zoom-out}
+#lb img{width:auto;height:auto;max-width:min(1100px,100%);max-height:calc(100vh - 130px);object-fit:contain;background:#111}
+#lb figcaption{color:#FFFCF2;font-size:13px;text-align:center}
+#lb button{position:absolute;background:rgba(255,252,242,.12);color:#FFFCF2;border:0;font-size:30px;line-height:1;width:46px;height:46px;cursor:pointer}
+#lb .lb-x{top:10px;right:10px}#lb .lb-p{left:8px;top:50%;transform:translateY(-50%)}#lb .lb-n{right:8px;top:50%;transform:translateY(-50%)}#lb.one .lb-p,#lb.one .lb-n{display:none}
+html.lb-lock{overflow:hidden}
+@media(max-width:600px){#lb{padding:56px 8px}#lb img{max-height:calc(100vh - 150px)}#lb .lb-p,#lb .lb-n{top:auto;bottom:12px;transform:none}}
+/* 5 PCの口コミ：左に名前・評価、右に本文、薄い線で区切る（スマホは今のまま） */
+@media(min-width:601px){
+#reviews{display:block}
+#reviews .rv{display:grid;grid-template-columns:190px minmax(0,1fr);column-gap:40px;row-gap:4px;align-items:start;background:transparent;clip-path:none;padding:26px 4px;border-top:1px solid #e3dccf}
+#reviews .rv:last-child{border-bottom:1px solid #e3dccf}
+#reviews .rv>em{grid-column:1;grid-row:1}
+#reviews .rv>b{grid-column:1;grid-row:2;margin:0;padding:0;border:0;font-size:15px}
+#reviews .rv>.rvb{grid-column:2;grid-row:1/span 4}
+#reviews .rv>.confirm-note{grid-column:1;grid-row:3;font-size:11.5px}
+#reviews .rv .rvb p+p{margin-top:8px}
+}
+/* 6 体験の流れ：STEPの間に三角 */
+.g4.flow{grid-template-columns:1fr 14px 1fr 14px 1fr 14px 1fr;gap:10px;align-items:stretch}
+.flow .fa{align-self:center;justify-self:center;width:0;height:0;border-left:12px solid var(--g);border-top:9px solid transparent;border-bottom:9px solid transparent}
+@media(max-width:600px){.g4.flow{grid-template-columns:1fr!important;gap:6px}.flow .card{padding:14px 16px}.flow .fa{border-left:9px solid transparent;border-right:9px solid transparent;border-top:11px solid var(--g);border-bottom:0}}
+/* 8 インタビュー：顔が切れないよう画像全体を表示 */
+.story .im{height:auto!important;aspect-ratio:419/555;background:#1c1b19}.story .im img{object-fit:contain}
+@media(max-width:600px){.story>*{flex-basis:72%!important}}
+/* 10・12 キッズ：動きの比較を写真ごとに、事例写真は上寄せ */
+.kcimg .cmp-t{font-weight:900;font-size:14px;margin:14px 0 6px}
+.kcimg .cmp{display:grid;grid-template-columns:1fr 1fr;gap:8px}.kcimg .cmp img{aspect-ratio:3/4;height:auto;object-fit:cover}
+.kcimg .lb{margin-bottom:2px}
+.kg img{object-position:50% 25%}
+/* 14 サポート選手の大会実績：8名のポスターを全体表示 */
+#ach-ph{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:14px}
+#ach-ph>div{height:auto!important;aspect-ratio:1200/1697;background:#111}#ach-ph img{object-fit:contain}
+#ach-ph+.confirm-note{margin-bottom:24px}
+@media(max-width:600px){#ach-ph>*{flex:0 0 62%!important}}
