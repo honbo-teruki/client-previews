@@ -93,3 +93,25 @@ header{padding:10px 16px}header nav{display:none}header nav.open{display:flex;fl
 .fsns a span{display:flex;flex-direction:column;font-weight:900;font-size:14px;line-height:1.3}.fsns small{font-weight:500;font-size:11.5px;color:#5c574f}
 .fsns .fig svg{color:#d6249f}.fsns .fnote b{font-family:Oswald,sans-serif;font-size:20px;background:#252422;color:#fff;padding:0 8px;line-height:1.5}
 .case p,.case h3,.rv p,.bam .note{word-break:normal;overflow-wrap:normal;line-break:strict}
+/* ===== 11/15 スマホ間延び対策（max-width:600px のみ。PCは変更なし） ===== */
+.rvm{display:none}
+@media(max-width:600px){
+section{padding:44px 0}h2{margin-bottom:18px}
+h2[style*="margin-top:72px"]{margin-top:44px!important}h2[style*="margin-top:56px"]{margin-top:36px!important}
+.worry{margin-bottom:18px}.worry span{font-size:13px;padding:6px 12px}
+.worry+.g3 .card{padding:18px 20px}.worry+.g3 .n{font-size:34px}
+.g3.vvm,.g3.course,.igs,#ach-ph+.al,#ach-ph{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;gap:14px;padding-bottom:6px}
+.g3.vvm>*,.g3.course>*,#ach-ph>*{flex:0 0 80%;scroll-snap-align:start}
+.course .im{height:170px}
+.g4.flow{grid-template-columns:1fr 1fr!important;gap:10px}.flow .card{padding:16px 14px}.flow h3{font-size:15px}.flow p{font-size:13px}
+.rvb{max-height:10.5em;overflow:hidden;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+.rv-open .rvb{max-height:none;-webkit-mask-image:none;mask-image:none}
+.rvm{display:block;align-self:flex-start;background:none;border:1px solid var(--ink);padding:4px 12px;font:700 12.5px "Zen Kaku Gothic New",sans-serif;color:var(--ink);cursor:pointer}
+.faq details{padding:14px 16px;margin-bottom:8px}.faq summary{font-size:14.5px}
+iframe{height:240px}
+.igs>div{flex:0 0 326px;scroll-snap-align:start}
+#ach-ph+.al{list-style:none;align-items:stretch}#ach-ph+.al li{flex:0 0 80%;scroll-snap-align:start;background:#fff;border:1px solid var(--st);border-bottom:1px solid var(--st);padding:12px 14px;font-size:13px}
+.kc .g2{grid-template-columns:1fr 1fr!important}.kc .g2 .card{padding:18px 16px}.kc .g2 .price{font-size:24px}
+.vvm .card h3{font-size:16px;word-break:normal;line-break:strict}
+#reviews{align-items:flex-start}#reviews .rv>b{margin-top:6px}
+}
