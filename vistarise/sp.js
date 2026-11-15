@@ -20,7 +20,7 @@
     var wide = window.matchMedia ? matchMedia('(min-width:1024px)') : null;
     if (wide && wide.addEventListener) wide.addEventListener('change', function (e) { if (e.matches) setOpen(false); });
   }
-  // 口コミ：本文をまとめる（タブレット・PCは左に名前・評価／右に本文、スマホは冒頭だけ＋「続きを読む」）
+  // 口コミ：本文をまとめる（タブレット・PCは左に名前・評価／右に本文。どの幅でも冒頭だけ＋「続きを読む」）
   document.querySelectorAll('.rv').forEach(function (c) {
     var ps = [].slice.call(c.querySelectorAll(':scope > p'));
     if (!ps.length) return;
