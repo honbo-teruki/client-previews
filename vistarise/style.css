@@ -284,3 +284,16 @@ header nav a,header nav.open a{white-space:nowrap}
 @media(min-width:768px){.kc h2{font-size:26px}}
 @media(min-width:1024px){.kc h2{font-size:30px}}
 @media(min-width:1280px){.kc h2{font-size:36px}}
+/* 11/15 実機チェック（15:37） */
+.hero{padding-left:20px;padding-right:20px}
+@media(min-width:768px){.hero{padding-left:32px;padding-right:32px}}
+@media(min-width:1024px){.hero{padding-left:40px;padding-right:40px}}
+.hero>div{min-width:0}
+.rv-area{margin-top:48px}
+.star.star-after{margin:26px 0 0}
+.bdg .big{border:0;border-left:4px solid var(--g)}
+.pl>div:first-child{overflow:hidden;position:relative}
+.pl>div:first-child img{width:100%;height:100%;object-fit:cover}
+.pl>div:last-child{position:static;min-width:0}
+@media(max-width:767px){#reviews{align-items:flex-start}}
+@media(min-width:768px) and (max-width:1023px){.pl{grid-template-columns:minmax(0,1fr)}.pl>div:first-child{height:320px!important}}
