@@ -208,9 +208,11 @@ dl{grid-template-columns:7em minmax(0,1fr)}
 #reviews .rv:last-child{border-bottom:1px solid #e3dccf}
 #reviews .rv>em{grid-column:1;grid-row:1}
 #reviews .rv>b{grid-column:1;grid-row:2;margin:0;padding:0;border:0;font-size:15px}
-#reviews .rv>.rvb{grid-column:2;grid-row:1/span 2;max-height:6.6em}
-#reviews .rv.rv-open>.rvb{max-height:none;-webkit-mask-image:none;mask-image:none}
-#reviews .rv>.rvm{grid-column:2;grid-row:3;justify-self:start;align-self:start;margin-top:10px}
+#reviews .rv{grid-template-rows:auto auto 1fr}
+#reviews .rv>.rvc{grid-column:2;grid-row:1/span 3;min-width:0}
+#reviews .rv .rvb{max-height:6.6em}
+#reviews .rv.rv-open .rvb{max-height:none;-webkit-mask-image:none;mask-image:none}
+#reviews .rv .rvm{margin-top:10px}
 #reviews .rv>.confirm-note{grid-column:1;grid-row:3;font-size:11.5px}
 #reviews .rv .rvb p+p{margin-top:8px}
 /* 11/15 16:20 PCもスマホと同じく冒頭だけ＋「続きを読む」 */

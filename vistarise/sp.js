@@ -30,7 +30,8 @@
     var b = document.createElement('button'); b.type = 'button'; b.className = 'rvm'; b.textContent = '続きを読む';
     b.setAttribute('aria-expanded', 'false');
     b.onclick = function () { var o = c.classList.toggle('rv-open'); b.textContent = o ? '閉じる' : '続きを読む'; b.setAttribute('aria-expanded', o ? 'true' : 'false'); };
-    box.parentNode.insertBefore(b, box.nextSibling);
+    var col = document.createElement('div'); col.className = 'rvc';
+    box.parentNode.insertBefore(col, box); col.appendChild(box); col.appendChild(b);
     c.classList.add('has-rvm');
   });
   // FAQ：最初は閉じておく（HTMLでも閉じてある）
