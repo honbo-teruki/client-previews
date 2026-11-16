@@ -301,3 +301,9 @@ header nav a,header nav.open a{white-space:nowrap}
 .pl>div:last-child{position:static;min-width:0}
 @media(max-width:767px){#reviews{align-items:flex-start}}
 @media(min-width:768px) and (max-width:1023px){.pl{grid-template-columns:minmax(0,1fr)}.pl>div:first-child{height:320px!important}}
+/* 11/16 「続きを読む」：黒枠をやめ、目立たない文字リンクに */
+.has-rvm .rvm,#reviews .rv .rvm{border:0;background:none;padding:2px 0;margin-top:6px;font:500 12.5px "Zen Kaku Gothic New",sans-serif;color:#6f6a62;text-decoration:underline;text-decoration-color:#CCC5B9;text-underline-offset:4px;letter-spacing:.04em}
+.has-rvm .rvm::after{content:"";display:inline-block;width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform .2s}
+.rv-open .rvm::after{transform:translateY(0) rotate(-135deg)}
+.has-rvm .rvm:hover{color:var(--gd);text-decoration-color:currentColor}
+.has-rvm .rvm:focus-visible{outline:2px solid var(--g);outline-offset:3px}
