@@ -355,3 +355,8 @@ header nav a,header nav.open a{white-space:nowrap}
 .ba2 .arr::after{content:"";position:absolute;right:-1px;top:50%;transform:translateY(-50%);border-left:8px solid #ffb27a;border-top:5px solid transparent;border-bottom:5px solid transparent}
 @media(min-width:768px){.ba2 .chip{font-size:10.5px}.ba2 .chip b{font-size:14px}.ba2 .lbl{font-size:13px}}
 @media(min-width:1280px){.ba2 .chip{font-size:11.5px;padding:5px 8px}.ba2 .chip b{font-size:16px}.ba2 .lbl{font-size:14px;top:10px;left:10px}.ba2-row{bottom:12px}.ba2-l{padding-left:10px}}
+/* 11/16 16:56 お客様の変化：本文を3行ほどでたたむ */
+#change .case .cfb{max-height:5.6em;font-size:inherit}
+#change .case .cfb p{margin:0}#change .case .cfb p+p{margin-top:8px}
+#change .case .rv-open .cfb{max-height:none;-webkit-mask-image:none;mask-image:none}
+#change .case .card>.rvm{margin:2px 0 10px}
