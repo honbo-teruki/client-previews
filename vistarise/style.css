@@ -338,3 +338,6 @@ header nav a,header nav.open a{white-space:nowrap}
 .hero .ph{height:auto;aspect-ratio:3/2;order:0}
 @media(min-width:768px){.hero{grid-template-columns:1fr 1.1fr}.hero .hero-ph{order:1}.hero .ph{height:auto;aspect-ratio:4/3}}
 @media(min-width:1024px){.hero .ph{aspect-ratio:3/2}}
+/* 11/16 口コミのイラスト（Canvaのデザインから。男性・男性・女性） */
+.rv>b.rv-who{display:flex;align-items:center;gap:10px}
+.rv .rv-av{width:44px;height:44px;border-radius:50%;flex:none;object-fit:cover}
