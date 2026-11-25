@@ -360,3 +360,20 @@ header nav a,header nav.open a{white-space:nowrap}
 #change .case .cfb p{margin:0}#change .case .cfb p+p{margin-top:8px}
 #change .case .rv-open .cfb{max-height:none;-webkit-mask-image:none;mask-image:none}
 #change .case .card>.rvm{margin:2px 0 10px}
+
+/* ---------- 理念（11/25 参考画像に合わせて：ロゴ＋英字＋縦線＋太字の一文＋補足。カードにしない） ---------- */
+.vvm3{display:grid;grid-template-columns:1fr;gap:56px;margin-top:40px;text-align:center}
+.vv{display:flex;flex-direction:column;align-items:center;padding:0 8px}
+.vv-logo{width:64px!important;height:auto!important;object-fit:contain}
+.vv-en{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:26px;letter-spacing:.06em;line-height:1.2;margin-top:22px;color:var(--ink)}
+.vv-line{display:block;width:1px;height:28px;background:var(--ink);margin:20px auto 22px}
+.vv h3{font-size:18px;font-weight:900;line-height:1.6;margin:0 0 22px;word-break:keep-all;line-break:strict}
+.vv p,.vv li{font-size:14px;line-height:2.1;font-weight:400;word-break:keep-all;line-break:strict}
+.vv ul{list-style:none;margin:0;padding:0}
+.vv ul.dot li::before{content:"・"}
+@media (min-width:1024px){
+  .vvm3{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:56px}
+  .vv-logo{width:72px!important}
+  .vv-en{font-size:30px}
+  .vv h3{font-size:19px;min-height:3.2em;display:flex;align-items:center;justify-content:center}
+}
