@@ -2,8 +2,7 @@
 (function () {
   var N = [
     [29, "bodymake.html", "ボディメイク／ボディメイクの変化（頻度）", "期間（5ヶ月・5ヶ月・3ヶ月）を入れました。それぞれの頻度（週◯回）も教えてください。"],
-    [33, "bodymake.html", "ボディメイク／大会実績（神田選手＝Y.K様）", "Y.K選手の実績を1つにまとめ、Instagramアカウントの記述は「神田選手」にしています。この表記でよいですか？"],
-    [43, "bodymake.html", "ボディメイク／サポート選手の大会実績（8名）", "高橋・中島・稲田・藤井・村井・吉田・神田の7名のサポートアスリート紹介画像を載せています。押すと大きく見られます。"],
+    [56, "index.html", "トップ／お客様の変化（K.T様の数字）", "K.T様の数字（体重−5.6kg・体脂肪率−4.3%）は、今はページに載せていません。掲載してよいですか？"],
   ];
   var q = new URLSearchParams(location.search);
   if (q.get("review") === "0") { document.documentElement.classList.add("review-off"); return; }
