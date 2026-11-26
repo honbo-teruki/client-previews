@@ -48,6 +48,26 @@
     box.parentNode.insertBefore(b, box.nextSibling);
     c.classList.add('has-rvm');
   });
+  // 11/26 本番前チェック：段落・見出しの最後（と<br>の直前）の4文字を改行させない。1〜2文字や「。」「す」だけが次の行に残るのを防ぐ（文言は変えない）
+  document.querySelectorAll('main p, main h2, main h3, main li, main dd, main summary, main .go, section p, section h2, section h3, section li, section dd, section summary, section .go').forEach(function (el) {
+    if (el.closest('.ba2-row, .vvm3, .instagram-media')) return;
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, list = [];
+    while ((n = w.nextNode())) list.push(n);
+    list.forEach(function (t) {
+      if (t.parentNode.classList && t.parentNode.classList.contains('nw')) return;
+      var nx = t.nextSibling; while (nx && nx.nodeType === 3 && !nx.data.trim()) nx = nx.nextSibling;
+      var atEnd = !nx || nx.nodeName === 'BR';
+      if (!atEnd) { var p = t.parentNode; if (p !== el && !p.nextSibling && p.parentNode === el && !nx) atEnd = true; }
+      if (!atEnd) return;
+      var ch = Array.from(t.data.replace(/\s+$/, '')); if (ch.length < 8) return;
+      var str = ch.join(''), sp0 = str.search(/\s\S*$/), k = 4;
+      if (sp0 >= 0 && Array.from(str.slice(sp0 + 1)).length <= 8) k = Array.from(str.slice(sp0 + 1)).length; // 最後が空白で区切られた語なら、その語ごと
+      if (k < 2) return;
+      var tail = ch.slice(-k).join(''), head = ch.slice(0, -k).join('');
+      var sp = document.createElement('span'); sp.className = 'nw'; sp.style.cssText = 'display:inline;white-space:nowrap;padding:0;margin:0;border:0;background:none;font:inherit;color:inherit'; sp.textContent = tail;
+      t.data = head; t.parentNode.insertBefore(sp, t.nextSibling);
+    });
+  });
   // FAQ：最初は閉じておく（HTMLでも閉じてある）
   document.querySelectorAll('.faq details[open]').forEach(function (d) { d.removeAttribute('open'); });
 })();

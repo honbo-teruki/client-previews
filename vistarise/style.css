@@ -380,3 +380,10 @@ header nav a,header nav.open a{white-space:nowrap}
 /* 11/26 22:42 先方：注意書き「※効果には個人差があります」を2段階ほど小さく・薄く（全ページ同じ） */
 p.note,.card p.note{font-size:11px;line-height:1.6;color:#9b958c;font-weight:400}
 .ph{display:inline-block}
+/* 11/26 本番前チェック：1〜2文字・単位だけが次の行に残らないように（Chrome・Safari 26以降。古いブラウザでは今までどおり） */
+p,li,dd,summary{text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+/* 11/26 本番前チェック：Instagram埋め込みが読み込み中に一瞬はみ出して横スクロールが出るのを防ぐ */
+.story .im.ig,.igs>div{overflow:hidden}iframe.instagram-media{width:100%!important}
+/* 11/26 本番前チェック：本文は単語の途中でも自然に改行（keep-all だと長い一続きの文が「子、」だけ残るなどの改行になるため）。理念（.vv）は今までどおり */
+p,dd{word-break:normal;line-break:strict}
+html,body{overflow-x:clip}
