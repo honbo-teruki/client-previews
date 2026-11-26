@@ -85,9 +85,29 @@ dd small{display:block; font-size:13px; color:var(--muted); margin-top:4px}
 .btn-sub{font-size:12px; opacity:.9; margin-top:2px}
 .due{margin-top:14px; font-size:14px; font-weight:700; color:var(--shu-dark)}
 
-.host{
-  margin-top:34px; text-align:center; font-size:13px; color:var(--muted); letter-spacing:.08em;
+
+/* 主催と写真 */
+.host{margin-top:30px; display:flex; flex-direction:column; align-items:center; gap:18px}
+.host-main{display:flex; align-items:flex-start; justify-content:center; gap:16px}
+.polaroid{background:#fff; padding:7px 7px 22px; box-shadow:0 2px 3px rgba(36,24,15,.18),0 8px 18px rgba(36,24,15,.12); position:relative}
+.polaroid img{display:block; width:100%; height:auto}
+.main-photo{width:150px; transform:rotate(-4deg)}
+.main-photo::before{ /* マスキングテープ */
+  content:""; position:absolute; top:-10px; left:50%; width:62px; height:20px; transform:translateX(-50%) rotate(3deg);
+  background:rgba(200,50,30,.55); box-shadow:0 1px 2px rgba(0,0,0,.08);
 }
+.host-name{
+  writing-mode:vertical-rl; font-family:"Zen Old Mincho",serif; font-weight:900;
+  font-size:24px; letter-spacing:.14em; line-height:1.25; margin-top:6px; white-space:nowrap;
+}
+.host-name .lbl{font-size:14px; color:var(--shu); letter-spacing:.3em; margin-bottom:.8em}
+.host-name .kana{font-family:"Zen Kaku Gothic New",sans-serif; font-weight:700; font-size:13px; color:var(--muted); letter-spacing:.1em; margin-top:.4em}
+.snaps{display:flex; justify-content:center; padding:0 6px}
+.snap{width:96px; padding:5px 5px 16px}
+.snap + .snap{margin-left:-12px}
+.s1{transform:rotate(-7deg) translateY(4px)}
+.s2{transform:rotate(4deg) translateY(-4px); z-index:1}
+.s3{transform:rotate(-2deg) translateY(6px)}
 
 /* 青海波の帯（年の瀬の縁起柄） */
 .wave{
@@ -111,7 +131,11 @@ dd small{display:block; font-size:13px; color:var(--muted); margin-top:4px}
   .btn{width:420px; padding:22px 24px 16px}
   .btn-main{font-size:27px}
   .due{font-size:15px}
-  .host{font-size:14px}
+  .host{flex-direction:row; justify-content:center; gap:44px; margin-top:44px}
+  .main-photo{width:190px}
+  .host-name{font-size:28px}
+  .snap{width:130px}
+  .snaps{align-items:center}
   .wave{height:150px}
 }
 body{display:flex; flex-direction:column}
