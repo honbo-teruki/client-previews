@@ -1,10 +1,6 @@
 /* 確認マーク（テスト用）。本番では review.js の読み込みと .confirm-note の要素を消すだけで全部消える。?review=0 で非表示。 */
 (function () {
   var N = [
-    [29, "bodymake.html", "ボディメイク／ボディメイクの変化（頻度）", "期間（5ヶ月・5ヶ月・3ヶ月）を入れました。それぞれの頻度（週◯回）も教えてください。"],
-    [33, "bodymake.html", "ボディメイク／大会実績（神田選手）", "サポート選手の大会実績で、Instagramアカウントの記述を「神田選手」にしています。この書き方でよいですか？"],
-    [43, "bodymake.html", "ボディメイク／サポート選手の大会実績（7名）", "サポート選手7名（高橋・中島・稲田・藤井・村井・吉田・神田）の紹介画像を載せています。この7名の画像の掲載と名前の表記は、このままでよいですか？"],
-    [56, "index.html", "トップ／お客様の変化（K.T様の数字）", "K.T様の数字（体重−5.6kg・体脂肪率−4.3%）は、今はページに載せていません。掲載してよいですか？"],
   ];
   var q = new URLSearchParams(location.search);
   if (q.get("review") === "0") { document.documentElement.classList.add("review-off"); return; }
@@ -18,6 +14,7 @@
       el.id = "cn" + n;
       el.innerHTML = "<b>確認" + pad(n) + "</b><span>" + esc(d[3]) + "</span>";
     });
+    if (!N.length) return; // 確認事項が0件ならパネルも出さない
     var p = document.createElement("div");
     p.id = "review-panel";
     var html = '<button type="button" class="rp-btn">確認事項 ' + N.length + '件</button><div class="rp-box"><div class="rp-head"><b>先方への確認事項</b><button type="button" class="rp-hide">マークを隠す</button></div><ol>';
