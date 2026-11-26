@@ -31,7 +31,7 @@ body{
   font-family:"Zen Old Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
   font-weight:900; text-align:center; line-height:1;
   margin:34px 0 26px; white-space:nowrap;
-  font-size:clamp(58px,17vw,112px); letter-spacing:.02em;
+  font-size:clamp(46px,16vw,112px); letter-spacing:.02em;
 }
 .honbo{position:relative; display:inline-block}
 .hb{
