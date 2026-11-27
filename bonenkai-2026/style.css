@@ -63,6 +63,12 @@ body{
 }
 .place{font-size:5.4cqw; font-weight:700; letter-spacing:.06em}
 .note{font-size:max(11px,3.2cqw); color:rgba(255,255,255,.74)}
+.fee{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:.2em 3.2cqw;
+  margin-top:1.1cqh; font-size:max(11px,3.2cqw); color:rgba(255,255,255,.74);
+}
+.fee-label{font-weight:700; color:#fff; letter-spacing:.08em}
+.fee-amount{font-family:"Inter Tight","Inter",sans-serif; font-feature-settings:"tnum" 1; font-size:4.6cqw; font-weight:600; color:#fff; letter-spacing:-.01em; margin-right:.15em}
 
 .rsvp{margin-top:3.4cqh}
 .btn{
@@ -104,5 +110,5 @@ body{
 }
 /* 9:16に近い横長めの画面では、写真を少し上へ寄せて顔とメモの間を空ける */
 @container (min-aspect-ratio: 53/100){
-  .photo{height:109%; inset:auto 0 0 0}
+  .photo{height:116%; inset:auto 0 0 0}
 }
